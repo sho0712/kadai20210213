@@ -55,7 +55,7 @@ def handle_message(event):
     # ユーザからの検索ワードを取得
     #if keyword == "1":
     a = pandas_1.main(day1)
-    b = f'積算温度が１８００℃以上となるのは{a}です'
+    b = f'積算温度が１８５０℃以上となるのは{a}です'
     line_bot_api.reply_message(event.reply_token,
                                    TextSendMessage(text=b))
     # title, url = sq.i()
