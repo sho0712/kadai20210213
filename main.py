@@ -54,17 +54,17 @@ def handle_message(event):
     #pandas_1.main(day1)
     # ユーザからの検索ワードを取得
     #if keyword == "1":
-        a = pandas_1.main(day1)
-        b = f'{a}です'
-        line_bot_api.reply_message(event.reply_token,
+    a = pandas_1.main(day1)
+    b = f'{a}です'
+    line_bot_api.reply_message(event.reply_token,
                                    TextSendMessage(text=b))
     # title, url = sq.i()
     # msg = f"[TITLE]:{title},[URL]: {url}"
     # line_bot_api.reply_message(event.reply_token,
     #                            TextSendMessage(text=msg))
-    else:
-        line_bot_api.reply_message(event.reply_token,
-                                   TextSendMessage(text="何かメッセージを入力してください"))
+    #else:
+    #    line_bot_api.reply_message(event.reply_token,
+    #                               TextSendMessage(text="何かメッセージを入力してください"))
 
 
 def handle_message(event):
