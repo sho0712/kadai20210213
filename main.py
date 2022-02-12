@@ -57,7 +57,7 @@ def handle_message(event):
     # c =
     # d = {a}までの累積日照時間は{c}の予定です'
     line_bot_api.reply_message(event.reply_token,
-                                   TextSendMessage(text=[b,d]))
+                                   TextSendMessage(text=b))
     # title, url = sq.i()
     # msg = f"[TITLE]:{title},[URL]: {url}"
     # line_bot_api.reply_message(event.reply_token,
