@@ -49,10 +49,25 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    a = pandas_1.main()
-    b = f'{a}です'
-    line_bot_api.reply_message(event.reply_token,
-                               TextSendMessage(text=b))
+    keyword = event.message.text
+    # ユーザからの検索ワードを取得
+    if keyword == 1:
+        a = pandas_1.main()
+        b = f'{a}です'
+        line_bot_api.reply_message(event.reply_token,
+                                   TextSendMessage(text=b))
+    # title, url = sq.i()
+    # msg = f"[TITLE]:{title},[URL]: {url}"
+    # line_bot_api.reply_message(event.reply_token,
+    #                            TextSendMessage(text=msg))
+    elif keyword == "":
+        line_bot_api.reply_message(event.reply_token,
+                                   TextSendMessage(text="何かメッセージを入力してください"))
+
+
+def handle_message(event):
+    pass
+
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
