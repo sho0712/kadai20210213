@@ -49,13 +49,9 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-
-
-# a = pandas_1.main
-
-
-line_bot_api.reply_message(event.reply_token,
-                           TextSendMessage(text=pandas_1.main))
+    a = pandas_1.main
+    line_bot_api.reply_message(event.reply_token,
+                               TextSendMessage(text=a))
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))

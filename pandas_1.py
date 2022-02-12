@@ -44,9 +44,10 @@ def main():
             i = (df0.loc[c, "day"])
             return i
 
-            break
-    df0.to_csv('data2.csv')
+            # break
+
+# if __name__ == '__main__':
+#    main()
 
 
-if __name__ == '__main__':
-    main()
+# df0.to_csv('data2.csv')
