@@ -42,7 +42,7 @@ def main():
         else:
             print(df0.loc[c, "day"])
             i = (df0.loc[c, "day"])
-            return i
+            return str(i)
 
             # break
 
