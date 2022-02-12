@@ -53,7 +53,7 @@ def handle_message(event):
 
     #if keyword == "1":
     a = pandas_1.main(keyword)
-    b = f'北上市で、田植えを{keyword}にすると、積算温度が１８５０℃以上となるのは{a}の予定です'
+    b = f'北上市で、田植えを{keyword}にすると、積算温度が２０００℃以上となるのは{a}の予定です'
     line_bot_api.reply_message(event.reply_token,
                                    TextSendMessage(text=b))
     # title, url = sq.i()
