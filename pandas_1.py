@@ -1,4 +1,3 @@
-
 def main(day1):
     import pandas
 
@@ -11,14 +10,13 @@ def main(day1):
 
     # print(df0.count())
 
-    # day1 ="2021/5/10"
+    day1 = "2021/5/10"
     col_point = df0['kion_A']
     # print(b)
 
     b = len(df0)
     cnt = 0
     # day1 = main.keyword
-
 
     for cnt in range(b - 1):
         day2 = df0.loc[cnt, "day"]
@@ -28,27 +26,32 @@ def main(day1):
             # print("OK")
             # print(cnt)
             a = cnt
-            print(a)
+            # print(a)
             break
-    print(a)
+    # print(a)
 
     for cnt in range(b - 1):
         c = a + cnt
-        print(c)
+        # print(c)
         if df0.loc[c, "ruiseki"] < 2000:
+            #df0.loc[c + 1, "nisho1"] = df0.loc[c, "nisho1"] + (df0.loc[c, "nisho"])
             if df0.loc[c, "kion_L"] > 5:
                 df0.loc[c + 1, "ruiseki"] = df0.loc[c, "ruiseki"] + (df0.loc[c, "kion_A"] - 5)
                 df0.loc[c + 1, "ruiseki"] = round(df0.loc[c + 1, "ruiseki"], 1)
             print(df0.loc[c + 1, "ruiseki"])
+            #print(df0.loc[c + 1, "nisho1"])
+
         else:
-            print(df0.loc[c, "day"])
+            # print(df0.loc[c, "day"])
             i = (df0.loc[c, "day"])
+            #i_2 = (df0.loc[c, "nisho1"])
             return i
+            #print(i_1, i_2)
 
             # break
 
-# if __name__ == '__main__':
-#    main()
 
+#if __name__ == '__main__':
+#    main()
 
 # df0.to_csv('data2.csv')

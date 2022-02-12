@@ -54,8 +54,10 @@ def handle_message(event):
     #if keyword == "1":
     a = pandas_1.main(keyword)
     b = f'北上市で、田植えを{keyword}にすると、積算温度が２０００℃以上となるのは{a}の予定です'
+    # c =
+    # d = {a}までの累積日照時間は{c}の予定です'
     line_bot_api.reply_message(event.reply_token,
-                                   TextSendMessage(text=b))
+                                   TextSendMessage(text=[b,d]))
     # title, url = sq.i()
     # msg = f"[TITLE]:{title},[URL]: {url}"
     # line_bot_api.reply_message(event.reply_token,
