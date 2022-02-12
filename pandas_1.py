@@ -47,5 +47,6 @@ def main():
             break
     df0.to_csv('data2.csv')
 
-# if __name__ == '__main__':
-#  main()
+
+if __name__ == '__main__':
+    main()
