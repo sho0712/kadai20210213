@@ -51,10 +51,10 @@ def callback():
 def handle_message(event):
     keyword = event.message.text
     day1=keyword
-    pandas_1.main(day1)
+    #pandas_1.main(day1)
     # ユーザからの検索ワードを取得
-    if keyword == "1":
-        a = pandas_1.main()
+    #if keyword == "1":
+        a = pandas_1.main(day1)
         b = f'{a}です'
         line_bot_api.reply_message(event.reply_token,
                                    TextSendMessage(text=b))
