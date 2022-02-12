@@ -10,7 +10,7 @@ def main(day1):
 
     # print(df0.count())
 
-    day1 = "2021/5/10"
+    #day1 = "2021/5/10"
     col_point = df0['kion_A']
     # print(b)
 
