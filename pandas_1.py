@@ -1,3 +1,4 @@
+
 def main(day1):
     import pandas
 
@@ -10,6 +11,7 @@ def main(day1):
 
     # print(df0.count())
 
+    # day1 ="2021/5/10"
     col_point = df0['kion_A']
     # print(b)
 
@@ -17,7 +19,6 @@ def main(day1):
     cnt = 0
     # day1 = main.keyword
 
-    # day1 = "2021/5/10"
 
     for cnt in range(b - 1):
         day2 = df0.loc[cnt, "day"]
