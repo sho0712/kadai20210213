@@ -10,6 +10,8 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage)
 
+import pandas_1
+
 app = Flask(__name__)
 
 line_bot_api = LineBotApi(os.environ["ACCESS_TOKEN"])
@@ -45,10 +47,13 @@ def callback():
     return "OK"
 
 
-a = "sss"
+
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+
+     a = pandas_1.main
     line_bot_api.reply_message(event.reply_token,
                                TextSendMessage(text=a))
 
