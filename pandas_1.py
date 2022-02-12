@@ -36,8 +36,8 @@ def main(day1):
         c = a + cnt
         print(c)
         if df0.loc[c, "ruiseki"] < 1850:
-            if df0.loc[c, "kion_A"] > 5:
-                df0.loc[c + 1, "ruiseki"] = df0.loc[c, "ruiseki"] + (df0.loc[c, "kion_L"] - 5)
+            if df0.loc[c, "kion_L"] > 5:
+                df0.loc[c + 1, "ruiseki"] = df0.loc[c, "ruiseki"] + (df0.loc[c, "kion_A"] - 5)
                 df0.loc[c + 1, "ruiseki"] = round(df0.loc[c + 1, "ruiseki"], 1)
             print(df0.loc[c + 1, "ruiseki"])
         else:
