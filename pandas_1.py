@@ -1,4 +1,4 @@
-def main():
+def main(day1):
     import pandas
 
     df0 = pandas.read_csv(
@@ -15,9 +15,9 @@ def main():
 
     b = len(df0)
     cnt = 0
-    # day1 = input("田植え日")
+    # day1 = main.keyword
 
-    day1 = "2021/5/10"
+    # day1 = "2021/5/10"
 
     for cnt in range(b - 1):
         day2 = df0.loc[cnt, "day"]

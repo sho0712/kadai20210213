@@ -50,6 +50,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     keyword = event.message.text
+    day1=keyword
+    pandas_1.main(day1)
     # ユーザからの検索ワードを取得
     if keyword == "1":
         a = pandas_1.main()
