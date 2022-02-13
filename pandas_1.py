@@ -7,7 +7,7 @@ def main(day1):
         day2 = df0.loc[cnt, "day"]
         if day1 == day2:
             a = cnt
-            break
+           # break
 
     for cnt in range(b - 1):
         c = a + cnt
@@ -15,7 +15,7 @@ def main(day1):
             if df0.loc[c, "kion_L"] > 5:
                 df0.loc[c + 1, "ruiseki"] = df0.loc[c, "ruiseki"] + (df0.loc[c, "kion_A"] - 5)
                 df0.loc[c + 1, "ruiseki"] = round(df0.loc[c + 1, "ruiseki"], 1)
-            print(df0.loc[c + 1, "ruiseki"])
+            # print(df0.loc[c + 1, "ruiseki"])
         else:
             df0.to_csv('data2.csv')
             i = (df0.loc[c, "day"])
